@@ -7,6 +7,15 @@ public class Product implements Serializable {
     private double price;
     private String productCategory;
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productName='" + productName + '\'' +
+                ", price=" + price +
+                ", productCategory='" + productCategory + '\'' +
+                '}';
+    }
+
     public Product(String productName, Double price, String productCategory) {
         this.productName = productName;
         this.price = price;
