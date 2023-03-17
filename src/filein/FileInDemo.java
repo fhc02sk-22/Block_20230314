@@ -25,7 +25,7 @@ public class FileInDemo {
                 //System.out.print((char) byteRead);
                 countCharacter++;
             }
-            fis.close();
+           // fis.close();
 
             System.out.println();
             System.out.println("Anzahl der Zeichen: " + countCharacter);

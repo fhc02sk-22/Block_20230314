@@ -10,23 +10,21 @@ public class DemoFileOutput {
 
         File f = new File("D:\\temp\\ETS23\\sub-ordner\\dokumente\\demo20230717.campus02");
 
-        try {
-            FileOutputStream fos = new FileOutputStream(f);
+        try (FileOutputStream fos = new FileOutputStream(f)) {
 
             String demo = "Wir haben die Intensivwoche um 21:30 hinter uns :-)!";
             char[] arrayOfChars = demo.toCharArray();
             for (char c : arrayOfChars) {
                 fos.write((int) c);
-
             }
             fos.flush();
-            fos.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
 
     }
