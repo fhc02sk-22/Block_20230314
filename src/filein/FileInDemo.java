@@ -20,9 +20,9 @@ public class FileInDemo {
             FileInputStream fis = new FileInputStream(f);
             int byteRead;
             while ((byteRead = fis.read()) != -1){
-/*                char[] c = Character.toChars(byteRead);
-                System.out.print(c[0]);*/
-                System.out.print((char) byteRead);
+                char[] c = Character.toChars(byteRead);
+                System.out.print(c[0]);
+                //System.out.print((char) byteRead);
                 countCharacter++;
             }
             fis.close();
